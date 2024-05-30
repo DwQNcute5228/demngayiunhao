@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm ngày iu nhao của chúng mình nèkkk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Đếm ngày iu nhao của chúng mìk</h1>
+        <p>Chúng mình bắt đầu iu nhao từ 22/3/2024, ngày mà tớ thấy tuyệt vời nhất trong cuộc đời</p>
+        <label for="start-date">Bé nhập 22/3/2024 thử đii :3</label><br>
+        <input type="date" id="start-date"><br>
+        <button onclick="calculateDays()">Số ngày nì :33</button>
+        <p>Bé iu ơi tớ mún nói rằng tớ iu bé và trân trọng nâng niu tất cả mọi thứ bé dành cho tớ :3</p>
+        <p>Và chúng mình cùng nhau xây dựng một chuyện tình địp và cute nhó🎀💗🌷</p>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        function calculateDays() {
+            const startDate = new Date(document.getElementById('start-date').value);
+            const today = new Date();
+            const timeDiff = today - startDate;
+            const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+            if (isNaN(daysDiff) || daysDiff < 0) {
+                document.getElementById('result').innerHTML = "Vui lòng chọn ngày hợp lệ.";
+            } else {
+                document.getElementById('result').innerHTML = `Chúng mình đã bên nhao được ${daysDiff} ngày.`;
+            }
+        }
+    </script>
+  
+</body>
+</html>
